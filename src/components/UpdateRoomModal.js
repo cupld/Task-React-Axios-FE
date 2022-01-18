@@ -13,7 +13,8 @@ export default function UpdateRoomModal(props) {
     setRoom({ ...room, [event.target.name]: event.target.value });
   };
   const handleSubmit = (event) => {
-
+    event.preventDefault();
+    props.updateRoom(room);
     props.closeModal();
   };
   return (
